@@ -2,13 +2,14 @@
 YELLOW='\033[1;33m'
 GREEN='\033[0;32m'
 RED='\033[0;31m'
+NC='\033[0m' # No Color
 echo -e "${YELLOW}Welcome to the installer!"
 echo -e "${YELLOW}Downloading installation files..."
 cd 
 wget https://zippyoppenheimer.com/pi_setup.tar.gz.gpg
 echo -e "${YELLOW}Verifying files..."
 SHA1CHECKSUM=$(sha1sum pi_setup.tar.gz.gpg)
-if [[ "$SHA1CHECKSUM" == "77018c47c1a5167ecbd59a272c8fa2f073ebf2bf" ]]
+if [[ "$SHA1CHECKSUM" == "42f889275090411bb038ac060ce59705443df053  pi_setup.tar.gz.gpg" ]]
 then
 	echo -e "${GREEN}Files verified, continuing with installation."
 else
@@ -38,3 +39,4 @@ sudo rm /etc/systemd/system/getty.target.wants/getty@tty1.service
 sudo cp getty@tty1.service /etc/systemd/system/getty.target.wants/getty@tty1.service
 sudo systemctl daemon-reload
 echo -e "${GREEN}Done! A reboot is required."
+echo -e "${NC} "

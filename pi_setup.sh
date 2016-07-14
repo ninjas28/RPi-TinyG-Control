@@ -1,7 +1,7 @@
 #!/bin/bash
 YELLOW='\033[1;33m'
-GREEN='\033[0;32m'
-RED='\033[0;31m'
+GREEN='\033[1;32m'
+RED='\033[1;31m'
 NC='\033[0m' # No Color
 echo -e "${YELLOW}Welcome to the installer!"
 echo -e "${YELLOW}Downloading installation files..."

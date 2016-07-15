@@ -9,7 +9,7 @@ cd
 wget https://zippyoppenheimer.com/pi_setup.tar.gz.gpg
 echo -e "${YELLOW}Verifying files..."
 SHA1CHECKSUM=$(sha1sum pi_setup.tar.gz.gpg)
-if [[ "$SHA1CHECKSUM" == "c6f69007eb9832d19829aed0006607532548e531  pi_setup.tar.gz.gpg" ]]
+if [[ "$SHA1CHECKSUM" == "6bc5d7230832ecf0774a872b21a8b6125dfff70a  pi_setup.tar.gz.gpg" ]]
 then
 	echo -e "${GREEN}Files verified, continuing with installation."
 else
